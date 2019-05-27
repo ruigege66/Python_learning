@@ -3,7 +3,7 @@
 #一个打印语句
 
 class Student():
-    def __init__(self,name="chenlu",age=18):
+    def __init__(self,name="haha",age=18):
         self.name = name
         self.age = age
 
@@ -15,7 +15,7 @@ class Student():
 def sayhello():
     print("欢迎来到图灵学院")
 
-
-print("我是木块p01")
+if __name__ == "__main__":
+    print("我是木块p01")
 
 
