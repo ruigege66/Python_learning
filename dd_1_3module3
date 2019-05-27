@@ -1,0 +1,6 @@
+import sys
+print(type(sys.path))
+for  p in  sys.path:
+    print(sys.path)
+
+sys.path.append(C:\Users\lenovo1\Desktop\微信公众号运营-Python)
