@@ -1,0 +1,13 @@
+try:
+    num = int(input("请输入一个除数:"))
+    result = 12/num
+    print("您所得的结果为:",result)
+except ZeroDivisionError:
+    print("不能输入除数为0的数")
+    exit()
+except ValueError:
+    print("不能输入非数字")
+    exit()
+except Exception:
+    print("我也不知道怎么错了")
+    exit()
