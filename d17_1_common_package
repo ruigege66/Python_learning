@@ -1,0 +1,17 @@
+import calendar
+#日历相关的模块
+
+import time
+
+# cal = calendar.calendar(2018)
+# print(cal)
+# cal2 = calendar.calendar(2017,l=1,c=20)
+# #print(cal2)
+result = calendar.isleap(2018)
+print(result)
+result2 = calendar.leapdays(1995,2222)
+print(result2)
+result3 =calendar.month(2019,5)
+print(result3)
+result4 = calendar.monthrange(2018,5)
+print(result4)
