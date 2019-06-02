@@ -1,0 +1,17 @@
+class CoustomError(ValueError):
+    pass
+try:
+    print("我手动引发一个异常")
+    raise CoustomError
+# except NameError:
+#     print("有异常NameError")
+
+except ValueError as abc:
+    print("这就是一个异常",abc)
+except CoustomError as e:
+    print("这个异常类型是我自己创造的",e)
+else:
+    print("竟然没有异常")
+finally:
+    print('这是一个手动引发的异常')
+
