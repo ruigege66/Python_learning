@@ -1,0 +1,21 @@
+import calendar
+import time
+
+m = calendar.monthcalendar(2019,6)
+print(type(m))
+for i in m:
+    print(i)
+n = calendar.prcal(2019)
+# print(type(n))
+# print(n)
+
+o = calendar.prmonth(2019,6)
+print(type(o))
+print(o)
+
+p = calendar.weekday(2019,6,4)
+print(type(p))
+print(p)
+
+x = time.timezone
+print(x)
