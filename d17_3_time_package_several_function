@@ -1,0 +1,27 @@
+import time
+print(time.timezone)
+print(time.altzone)
+print(time.daylight)
+
+t = time.localtime()
+print(type(t))
+print(t)
+
+form_t = time.asctime(t)
+print(type(form_t))
+print(form_t)
+
+current_time = time.ctime()
+print(type(current_time))
+print(current_time)
+
+lt = time.localtime()
+ts = time.mktime(lt)
+print(type(ts))
+print(ts)
+print(type(time.time()))
+print(time.time())
+
+ab = time.clock()
+print(type(ab))
+print(ab)
