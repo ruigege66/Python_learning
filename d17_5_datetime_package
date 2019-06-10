@@ -1,0 +1,36 @@
+import datetime,time,timeit
+
+dt = datetime.datetime(2019,6,10)
+print(type(dt))
+print(dt.today())
+print(dt.now())
+print(dt.utcnow())
+print(dt.fromtimestamp(time.time()))
+print(dt)
+
+t1 = datetime.datetime.now()
+print(t1.strftime("%Y{a}%m{a}%d{b}%H{c}%M{c}%S".format(a="/",b=" ",c=":")))
+t2 =datetime.timedelta(hours=1,days=2,minutes=1,seconds=2)
+print((t1+t2).strftime("%Y{a}%m{a}%d{b}%H{c}%M{c}%S".format(a="/",b=" ",c=":")))
+
+def p():
+    time.sleep(3.6)
+
+t3 = time.time()
+p()
+print(time.time()-t3)
+
+#生成列表两种方法的比较
+#如果单纯比较生成一个列表的时间，可能很难实现
+c='''
+sum= []
+for i in range(1000):
+    sum.append(i)
+'''
+#利用timeit调用代码，执行100000次，查看运行时间
+t4 = timeit.timeit(stmt = "[i for i in range(1000)]",number=100000)
+#测试代码c执行100000次的运行结果
+t5 = timeit.timeit(stmt=c,number=100000)
+print(t4)
+print(t5)
+help(timeit.timeit())
