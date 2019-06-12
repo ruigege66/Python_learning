@@ -1,0 +1,16 @@
+import os
+address1 = os.path
+print(address1)
+
+address2 = os.getcwd()
+print(address2)
+
+address3 = os.chdir(r"C:\Users\lenovo1")
+print(os.getcwd())
+
+address4 = os.listdir(r"C:\Users\lenovo1")
+print(address4)
+address5 = os.listdir()
+print(address5)
+
+address6 = os.makedirs("youxiu",exist_ok=True)
