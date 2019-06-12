@@ -1,0 +1,8 @@
+h = '''
+def doTt(num1):
+    for i in range(num1):
+        print(i)
+    '''
+
+t6 = timeit.timeit("doTt(2)",setup=h,number=3)
+print(t6)
