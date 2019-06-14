@@ -1,0 +1,17 @@
+import os
+help(os.system)
+rst1 = os.system('cd')
+print(rst1)
+
+rst2 = os.getenv("PATH")
+print(rst2)
+
+rst3 = os.putenv("PATH","C;/Users/lenovel/")
+
+rst4 = os.curdir
+print(rst4)
+rst5 = os.pardir
+print(rst5)
+print(os.sep)
+print(os.linesep)
+print(os.name)
