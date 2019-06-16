@@ -1,0 +1,16 @@
+import os.path as abc
+
+# 代表当前目录，双点代表当前父目录
+print(abc.abspath("."))
+
+print(abc.basename(r"C:\Users\lenovo1\untitled"))
+
+print(abc.join('df','daf','adfsd'))
+
+print(abc.split(r"C;\Users\lenovo1\untitled\dwf\efds"))
+
+print(abc.isdir(r"C;\Users\lenovo1\untitled"))
+print(abc.isdir(r"C;\Users\lenovo1\untitled\dwf\efds.py"))
+
+print(abc.exists("C:\\Users\\lenovo1\\untitled"))
+print(abc.exists("C:\\Users\\lenovo1\\untitled\\dwf\\efds.py"))
