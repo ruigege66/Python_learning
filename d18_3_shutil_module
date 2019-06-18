@@ -1,0 +1,23 @@
+import shutil
+
+source_path = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\image\4.1.png"
+target_path = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\666.png"
+abc = shutil.copy(source_path,target_path)
+print(abc)
+
+abc2 = shutil.copy2(source_path,target_path)
+print(abc2)
+
+source_path1 = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\Python连载1-package解析.docx"
+target_path1 = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python"
+abc3 = shutil.copyfile(source_path1,target_path1)
+print(abc3)
+
+target_path2 = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\666"
+abc4 = shutil.move(source_path1,target_path2)
+
+target_path3 = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\Python连载1-package解析.docx"
+source_path3 = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\6667"
+abc5 = shutil.make_archive(source_path3,"zip",target_path3)
+
+help(shutil.make_archive)
