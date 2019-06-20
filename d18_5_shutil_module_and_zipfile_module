@@ -1,0 +1,17 @@
+import shutil,zipfile
+
+unpack_archive_address = r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\666"
+abc1 = shutil.unpack_archive(r"C:\Users\lenovo1\Desktop\微信公众号运营-Python\Python连载12-shutil.zip",unpack_archive_address)
+print(abc1)
+
+local_adress1 = r"C:\Users\lenovo1\untitled"
+zf = zipfile.ZipFile(r"C:\Users\lenovo1\untitled\aaaa.zip")
+#这个aaaa.zip是提前压缩好的一个文件，他是压缩的_9_6nherit_sub_class.py这个文件，所以下面的获取详情的函数是可以操作的
+rst = zf.getinfo("_9_6nherit_sub_class.py")
+print(rst)
+
+rst1 = zf.namelist()
+print(rst1)
+
+rst2 = zf.extractall()
+print()
