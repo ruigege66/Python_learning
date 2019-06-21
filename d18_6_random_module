@@ -1,0 +1,10 @@
+import random
+number1 = random.random()
+print(number1)
+list1 = [i for i in range(20)]
+print(list1)
+print(random.choice(list1))
+list2 = random.shuffle(list1)
+print(list1)
+number2 = random.randint(1,20)
+print(number2)
