@@ -1,0 +1,7 @@
+#计算一个数字的100倍，因为就是一个表达式所以没有returm
+stm = lambda x:100*x
+#使用上和函数调用一模一样
+print(stm(52))
+
+stm2 = lambda x,y,z:x+y-z*100
+print(stm2(2,5,9))
