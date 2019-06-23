@@ -1,0 +1,37 @@
+def FunA():
+    print("FunA")
+FunA()
+FunB = FunA
+FunB()
+
+def funA(n):
+    return n * 100
+#在写一个函数，把传入参数乘以300倍，利用高阶函数
+def funB(n):
+    return funA(n) * 3
+
+print(funB(9))
+
+def funC(n,f):
+    #假定函数是把n扩大三百倍00
+    retrun f(n) * 3
+
+print(funC(9,funA))
+
+#map举例：有一个列表，相对列表中的每一个元素都乘以10，并得到新的列表
+
+l1 = [i for i in range(10)]
+print(l1)
+l2 = []
+for i in l1:
+    l2.append(i*10)
+print(l2)
+#利用map来实现
+def mulTen(n):
+    return n*10
+l3 = map(mulTen,l1)
+print(type(l3))
+print(l3)
+print(list(l3))
+l4 = [i for i in l3]
+print(l4)
