@@ -1,0 +1,16 @@
+import functools
+#定义一个操作函数，加入操作函数只是相加
+def myAdd(x,y):
+    return x + y
+#对于列表执行myAdd的操作
+num1 = functools.reduce(myAdd,[1,2,3,4,5,6])
+print(num1)
+
+def isEven(a):
+    return a % 2 ==0
+list1 = [555,44,5,52652,56,523,6,626,656]
+#利用这个函数我们把列表中的偶数都给挑选出来了
+rst1 = filter(isEven,list1)
+print(type(rst1))
+print(rst1)
+print(list(rst1))
