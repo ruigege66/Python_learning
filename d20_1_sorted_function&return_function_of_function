@@ -1,0 +1,64 @@
+#help(sorted)
+#排序案例1
+a = [526,6,5565,323,596,265,6256]
+al = sorted(a)
+ap = sorted(a,reverse=True)
+print(al)
+print(ap)
+
+#排序案例2
+b = [514,56,25,526,-54,-54156,4,54,-415]
+#按照绝对值排序
+#abs是求绝对值的意思
+a1 = sorted(b,key=abs,reverse=True)
+print(a1)
+
+#sorted案例
+astr = ['dana','Dana','youxiu','asdhj']
+a2 = sorted(astr)
+print(a2)
+#将字母全部变为小写，然后进行升序排列，并列的话，原来是大写的排在后面
+a3 = sorted(astr,key=str.lower)
+print(a3)
+
+def myfunction(a):
+    print("试一下结果")
+    return None
+
+myfunction("youxiu")
+
+#函数作为返回值进行反悔，被返回的函数在函数体中已经被定义
+def myF2():
+    def myF3():
+        print("再试一下结果")
+        return 3
+    return myF3
+
+f3 = myF2()
+print(type(f3))
+print(f3)
+print("------分割线------")
+print(f3())
+
+#负责一点的返回函数的例子
+#args：参数列表
+#（1）myF4定义了函数，返回内部函数定义的myF5;(2)myF5定义了外部变量，这个变量是myF4的参数
+def myF4(*args):
+#*args中的星号是让Python创建一个名为args的空元组
+    def myF5():
+        rst = 0
+        for n in args:
+            rst += n
+        return rst
+    return myF5
+f5 = myF4(2,8,54,652,6526,6)
+print(f5())
+
+
+def myF6(*args):
+    rst = 0
+    for n in args:
+        rst += n
+    return rst
+f6 = myF6(2,8,54,652,6526,6)
+print(f6)
