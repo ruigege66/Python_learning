@@ -1,0 +1,35 @@
+def hello():
+    print("我是一个测试程序")
+f = hello
+print(f.__name__)
+print(hello.__name__)
+
+import time
+#对hello函数进行功能扩展，每次执行hello前打印时间
+def printTime(f):
+# 高阶函数，以函数作为参数
+    def wrapper(*args,**kwargs):
+        print("Time:",time.ctime())
+        return f(*args,**kwargs)
+    return wrapper
+#上面定义了装饰器，使用的时候需要用到@符号，此符号是python语法
+@printTime
+def hello():
+    print("Hello World")
+hello()
+
+
+#装饰器的好处是，一旦定义，则可以装饰任意函数
+#一旦被其装饰，则把装饰器的功能直接添加在定义函数的功能上
+#上面对函数的装饰使用了系统定义的语法糖，下面开始手动执行一下装饰器
+
+def hello3():
+    print("厉害")
+hello3 = printTime(hello3)
+#这是向printTime传参hello3，然后返回wrapper，也就是hello3 = wrapper
+hello3()
+#执行了hello3函数，也就是执行了wrapper函数，先打印了“厉害”然后返回了最开始的hello3，但是后面有括号就是执行了最开始的
+#hello3（），打印了厉害
+
+aa = printTime(hello3)
+aa()
