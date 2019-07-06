@@ -1,0 +1,18 @@
+#把字符串转换为十进制数字
+print(int('123456'))
+#help(int)
+#把八进制的字符串转换为十进制
+eight = int('1554',8)
+print(eight)
+
+#新建一个函数，此函数是默认输入的字符串是16进制数字
+#此字符串返回十进制数字
+def int16(x,base=16):
+    return int(x,base)
+print(int16('58A'))
+
+
+#偏函数的应用例子
+from functools import partial
+int16 = partial(int,base=16)
+print(int16("58A"))
