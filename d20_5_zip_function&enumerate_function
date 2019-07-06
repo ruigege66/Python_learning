@@ -1,0 +1,23 @@
+#zip案例
+l1 = [1,2,3,4,5]
+l2 = [11,22,33,44,55]
+z = zip(l1,l2)
+print(type(z))
+print(z)
+for i in z:
+    print(i)
+l6 = [i for i in z]
+l7 = [i for i in zip(l1,l2)]
+print(l6)
+print(l7)
+
+l3 = [7,8,9]
+#序号默认开始为0
+em = enumerate(l3)
+l5 = [i for i in em]
+print(l5)
+#序号设置开始为25
+em2 = enumerate(l3,start=25)
+l6 = [i for i in em2]
+print(l6)
+
