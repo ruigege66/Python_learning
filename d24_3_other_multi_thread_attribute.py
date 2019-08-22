@@ -31,6 +31,20 @@ def main1():
     print("正在运行的子线程数量为：{0}".format(threading.activeCount()))#打印出了线程的数量，包括主线程和两个子线程一共3个线程
     t1.join()#等线程1运行完了再接着向下运行
     print("ALL done at :",time.ctime())
+    
+     class MyThread(threading.Thread):#定义一个Thread的子类
+        def __init__(self,args):#重写__init__函数，其中参数为self和新引入的参数
+            super(MyThread,self).__init__()#固定格式，继承父类的__init__函数
+            self.args = args
+​
+        def run(self):
+            time.sleep(1)
+            print("The args for this class is {0}".format(self.args))
+​
+    for i in range(5):
+        t = MyThread(i)
+        t.start()
+        t.join()
 
 if __name__ == "__main__":
     main1()
