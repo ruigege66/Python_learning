@@ -1,0 +1,6 @@
+<Schooler xmlns:student="http://my_student"  xmlns="http://my_room">
+    <student:Name>LiuYing</student:Name><!--其实这里面的name容易产生歧义，所以定义了两个命名空间来对name加以区分-->
+    <Age>23</Age>
+    <room:Name>2014</room:Name>
+    <Location>1-23-1</Location>
+</Schooler>
