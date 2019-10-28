@@ -1,0 +1,19 @@
+<School>
+    <Teacher>
+        <Name>liyang</Name>
+        <Age details="youxiu">36</Age>
+        <Mobile>199512356589</Mobile>
+    </Teacher>
+    <Student>
+        <Name test="wodejgoafewf">yangli</Name>
+        <Age>18</Age>
+        <Mobile>15945978623</Mobile>
+        <ADDer a="b">&#39034;&#20415;&#25913;&#30340;</ADDer>
+    </Student>
+    <Student>
+        <Name test="wodejgoafewf">zhangsan</Name>
+        <Age>20</Age>
+        <Mobile>15945974012</Mobile>
+    </Student>
+
+</School>
