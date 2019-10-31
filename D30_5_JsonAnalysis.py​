@@ -1,0 +1,23 @@
+import json
+student={
+    "name":"liuming",
+    "age":18,
+    "mobile":"15847562589"
+}
+print(type(student))
+stu_json = json.dumps(student)
+# print(stu_json)
+print("JSON对象：{0}".format(stu_json))
+stu_dict = json.loads(stu_json)
+print(stu_dict)
+print(type(stu_dict))
+
+data = {"name":"hahah",
+        "age":15
+        }
+with open("t.json","w") as f:
+    json.dump(data,f)#将python数据转换成json格式写到文件f中去
+
+with open("t.json","r") as f:
+    d = json.load(f)
+    print(d)
